@@ -12,7 +12,7 @@ let package = Package(
             targets: ["ALTENLoggerCore"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-log.git", .upToNextMajor(from: "1.4.4"))
+        .package(url: "https://github.com/apple/swift-log.git", .upToNextMajor(from: "1.5.3"))
     ],
     targets: [
         .target(
