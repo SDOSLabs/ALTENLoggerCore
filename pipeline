@@ -1,0 +1,18 @@
+#!groovy
+/* groovylint-disable NestedBlockDepth */
+//Jenkinsfile (Declarative Pipeline)
+
+//Shared library located in https://gitlab.alten.es/iOS/CI/ContinuousIntegration/shared-library-iOS.git
+
+pipeline {
+    agent { label 'General' }
+    stages {
+        stage('Configuración inicial') {
+            steps {
+                script {
+                    sh 'printenv | sort' 
+                }
+            }
+        }
+    }
+}
