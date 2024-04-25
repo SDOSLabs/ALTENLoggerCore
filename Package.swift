@@ -12,13 +12,15 @@ let package = Package(
             targets: ["ALTENLoggerCore"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-log.git", .upToNextMajor(from: "1.5.3"))
+        .package(url: "https://github.com/apple/swift-log.git", .upToNextMajor(from: "1.5.4"))
     ],
     targets: [
         .target(
             name: "ALTENLoggerCore",
             dependencies: [
                 .product(name: "Logging", package: "swift-log")
-            ])
+            ],
+            resources: [.process("PrivacyInfo.xcprivacy")]
+        )
     ]
 )
